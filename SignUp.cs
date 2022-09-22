@@ -19,6 +19,8 @@ namespace YTdrugisendData
         public static Boolean sms ;
         public static Boolean reports;
         public static Boolean transactions;
+
+        Confirmation c = new Confirmation();
         public SignUp()
         {
             InitializeComponent();
@@ -26,7 +28,12 @@ namespace YTdrugisendData
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            fName = txtFirstName.Text;
+            lName = txtLastName.Text;
+            emailAddress = txtEmailAddress.Text;
 
+            c.Show();
         }
 
         private void chkSMS_CheckedChanged(object sender, EventArgs e)
